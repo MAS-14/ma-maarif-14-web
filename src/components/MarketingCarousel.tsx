@@ -20,9 +20,9 @@ const slides = [
     },
     {
         id: 3,
-        title: "Fasilitas Lab Komputer",
+        title: "Fasilitas Sekolah",
         desc: "Sarana pembelajaran modern untuk menunjang skill digital santri.",
-        image: "/projects/ma-maarif/lab.jpg",
+        image: "/projects/ma-maarif/fasilitas.jpg",
     },
 ];
 
@@ -160,7 +160,7 @@ export default function MarketingCarousel() {
                             {slides.map((slide, idx) => (
                                 <motion.div
                                     key={slide.id}
-                                    whileHover={{ y: -10 }}
+                                    whileHover={{ scale: 1.02 }}
                                     onClick={() => setCurrentIndex(idx)}
                                     className={`relative w-64 h-40 rounded-xl overflow-hidden cursor-pointer border-2 transition-all duration-300 ${currentIndex === idx ? 'border-yellow-500 shadow-lg scale-105' : 'border-transparent opacity-70 hover:opacity-100'
                                         }`}
