@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     title: "MA Ma'arif 14 Sukorame | Ahlussunnah Wal Jama'ah",
     description: "Website resmi Madrasah Aliyah Ma'arif 14 Sukorame - Lembaga pendidikan Islam berbasis Ahlussunnah Wal Jama'ah",
     keywords: ["MA Ma'arif 14", "Sukorame", "Madrasah Aliyah", "Pendidikan Islam", "Ahlussunnah Wal Jama'ah"],
+    verification: {
+        google: 'ORj8UScodGi7faybsOd5oMbbPgxv198CvJEA3832ysg',
+    },
 };
 
 export default function RootLayout({

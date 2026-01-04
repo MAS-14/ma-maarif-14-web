@@ -1,4 +1,5 @@
 import BannerPPDB from "@/components/marketing/BannerPPDB";
+import MarketingCarousel from "@/components/MarketingCarousel";
 import { BookOpen, Users, Award, Heart } from "lucide-react";
 
 // Feature highlights data
@@ -29,10 +30,12 @@ export default function Home() {
     return (
         <>
             {/* Hero Section - Full Width Banner PPDB */}
-            {/* Hero Section - Full Width Banner PPDB */}
             <section className="w-full">
                 <BannerPPDB />
             </section>
+
+            {/* Marketing Carousel - Activity Gallery */}
+            <MarketingCarousel />
 
             {/* Welcome Section */}
             <section className="py-20 lg:py-28 bg-cream">
