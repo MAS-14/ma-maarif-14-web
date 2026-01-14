@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X, GraduationCap } from "lucide-react";
 
 const navLinks = [
@@ -12,6 +13,7 @@ const navLinks = [
 ];
 
 export default function Navbar() {
+    const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
@@ -26,8 +28,8 @@ export default function Navbar() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 w-full z-[100] transition-all duration-300 ${scrolled
-                    ? "bg-emerald-950/95 backdrop-blur-md shadow-lg py-3 border-b border-white/10"
-                    : "bg-emerald-950 py-4 border-b border-white/10"
+                ? "bg-emerald-950/95 backdrop-blur-md shadow-lg py-3 border-b border-white/10"
+                : "bg-emerald-950 py-4 border-b border-white/10"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -51,7 +53,10 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className="relative px-4 py-2 text-white font-medium hover:text-emerald-200 transition-colors group"
+                                className={`relative px-4 py-2 font-medium transition-colors group ${pathname === link.href
+                                        ? "text-yellow-500 border-b-2 border-yellow-500"
+                                        : "text-white hover:text-emerald-200"
+                                    }`}
                             >
                                 <span>{link.name}</span>
                                 {link.badge && (
@@ -59,8 +64,10 @@ export default function Navbar() {
                                         PK
                                     </span>
                                 )}
-                                {/* Underline Decoration */}
-                                <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gold group-hover:w-3/4 transition-all duration-300" />
+                                {/* Underline Decoration - Only show hover effect if not active */}
+                                {pathname !== link.href && (
+                                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gold group-hover:w-3/4 transition-all duration-300" />
+                                )}
                             </Link>
                         ))}
                     </nav>

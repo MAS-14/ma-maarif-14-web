@@ -7,13 +7,13 @@ import { ArrowRight, Sparkles } from "lucide-react";
 
 export default function BannerPPDB() {
     return (
-        <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-800">
-            {/* Background Decorations */}
-            <div className="absolute inset-0 overflow-hidden">
-                <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-emerald-500/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
-                <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gold/10 rounded-full blur-3xl translate-x-1/4 translate-y-1/4" />
-                {/* Decorative Pattern */}
-                <div className="absolute inset-0 opacity-5 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%221%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]" />
+        <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden bg-white">
+            {/* Background Decorations - Adjusted for Light Mode */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-0 left-0 w-[600px] h-[600px] bg-emerald-50/50 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+                <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-gold/5 rounded-full blur-3xl translate-x-1/4 translate-y-1/4" />
+                {/* Decorative Pattern - Darker for visibility on white */}
+                <div className="absolute inset-0 opacity-[0.03] bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23000000%22%20fill-opacity%3D%221%22%3E%3Cpath%20d%3D%22M36%2034v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6%2034v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6%204V0H4v4H0v2h4v4h2V6h4V4H6z%22%2F%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E')]" />
             </div>
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -39,9 +39,9 @@ export default function BannerPPDB() {
                         </motion.div>
 
                         {/* Headline - Serif Font */}
-                        <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-white leading-tight mb-6">
+                        <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-emerald-950 leading-tight mb-6">
                             Membentuk Generasi{" "}
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-300 to-emerald-100">
+                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-emerald-800">
                                 Digital
                             </span>
                             , Merawat Tradisi{" "}
@@ -49,7 +49,7 @@ export default function BannerPPDB() {
                         </h2>
 
                         {/* Subheadline */}
-                        <p className="text-emerald-200/80 text-lg lg:text-xl leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
+                        <p className="text-emerald-900/80 text-lg lg:text-xl leading-relaxed mb-8 max-w-xl mx-auto lg:mx-0">
                             Bergabunglah bersama MA Ma'arif 14 Sukorame. Pendidikan berkualitas
                             dengan nilai-nilai Islam yang kuat untuk masa depan yang gemilang.
                         </p>
@@ -65,25 +65,25 @@ export default function BannerPPDB() {
                             </Link>
                             <Link
                                 href="/profil"
-                                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-white/30 text-white font-semibold rounded-full hover:bg-white/10 transition-all duration-300"
+                                className="inline-flex items-center gap-2 px-8 py-4 border-2 border-emerald-950/20 text-emerald-900 font-semibold rounded-full hover:bg-emerald-50 transition-all duration-300"
                             >
                                 Pelajari Lebih Lanjut
                             </Link>
                         </div>
 
                         {/* Stats */}
-                        <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10">
+                        <div className="grid grid-cols-3 gap-6 mt-12 pt-8 border-t border-emerald-950/10">
                             <div className="text-center lg:text-left">
-                                <div className="text-3xl lg:text-4xl font-bold text-white">25+</div>
-                                <div className="text-emerald-300/70 text-sm">Tahun Pengalaman</div>
+                                <div className="text-3xl lg:text-4xl font-bold text-emerald-950">25+</div>
+                                <div className="text-emerald-800/70 text-sm">Tahun Pengalaman</div>
                             </div>
                             <div className="text-center lg:text-left">
-                                <div className="text-3xl lg:text-4xl font-bold text-white">500+</div>
-                                <div className="text-emerald-300/70 text-sm">Alumni Sukses</div>
+                                <div className="text-3xl lg:text-4xl font-bold text-emerald-950">500+</div>
+                                <div className="text-emerald-800/70 text-sm">Alumni Sukses</div>
                             </div>
                             <div className="text-center lg:text-left">
-                                <div className="text-3xl lg:text-4xl font-bold text-white">A</div>
-                                <div className="text-emerald-300/70 text-sm">Akreditasi</div>
+                                <div className="text-3xl lg:text-4xl font-bold text-emerald-950">A</div>
+                                <div className="text-emerald-800/70 text-sm">Akreditasi</div>
                             </div>
                         </div>
                     </motion.div>

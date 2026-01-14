@@ -35,7 +35,7 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="id" className={`${inter.variable} ${outfit.variable} ${playfair.variable}`}>
-            <body className="min-h-screen flex flex-col bg-pattern font-sans">
+            <body className="min-h-screen flex flex-col bg-white font-sans">
                 <Navbar />
                 <main className="flex-grow">{children}</main>
                 <Footer />
