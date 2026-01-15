@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X, GraduationCap } from "lucide-react";
+import Image from "next/image";
 
 const navLinks = [
     { name: "Beranda", href: "/" },
@@ -37,7 +38,13 @@ export default function Navbar() {
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3 group">
                         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-800 to-emerald-600 flex items-center justify-center shadow-emerald-glow group-hover:scale-105 transition-transform border border-white/10">
-                            <GraduationCap className="w-7 h-7 text-white" />
+                            <Image
+                                src="/logo-sekolah.png"
+                                alt="MA Ma'arif 14 Logo"
+                                width={40}
+                                height={40}
+                                className="w-8 h-8 object-contain"
+                            />
                         </div>
                         <div className="hidden sm:block">
                             <h1 className="font-display font-bold text-white text-lg leading-tight">
@@ -54,8 +61,8 @@ export default function Navbar() {
                                 key={link.name}
                                 href={link.href}
                                 className={`relative px-4 py-2 font-medium transition-colors group ${pathname === link.href
-                                        ? "text-yellow-500 border-b-2 border-yellow-500"
-                                        : "text-white hover:text-emerald-200"
+                                    ? "text-yellow-500 border-b-2 border-yellow-500"
+                                    : "text-white hover:text-emerald-200"
                                     }`}
                             >
                                 <span>{link.name}</span>
