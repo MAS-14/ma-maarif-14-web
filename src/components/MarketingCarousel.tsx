@@ -10,7 +10,7 @@ const slides = [
         id: 1,
         title: "PPDB 2026/2027",
         desc: "Penerimaan Peserta Didik Baru telah dibuka. Segera daftarkan diri Anda!",
-        image: "/projects/ma-maarif/flyer-ppdb.jpg",
+        image: "/projects/ma-maarif/marketing-flyer.png",
     },
     {
         id: 2,
@@ -81,7 +81,7 @@ export default function MarketingCarousel() {
                                         src={slides[currentIndex].image}
                                         alt={slides[currentIndex].title}
                                         fill
-                                        className="object-cover"
+                                        className="object-contain"
                                         onError={(e) => {
                                             // Hide image on error to show fallback
                                             const target = e.target as HTMLImageElement;
