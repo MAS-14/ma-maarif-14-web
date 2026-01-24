@@ -110,7 +110,7 @@ export default function BannerPPDB() {
                                     <div className="relative aspect-[4/5] w-full">
                                         {/* Image - Will show when file exists */}
                                         <Image
-                                            src="/projects/ma-maarif/marketing-flyer.jpg"
+                                            src="/marketing-flyer.jpg"
                                             alt="PPDB MA Ma'arif 14 Sukorame - Flyer Pendaftaran"
                                             fill
                                             className="object-contain"
