@@ -10,7 +10,7 @@ const slides = [
         id: 1,
         title: "PPDB 2026/2027",
         desc: "Penerimaan Peserta Didik Baru telah dibuka. Segera daftarkan diri Anda!",
-        image: "/projects/ma-maarif/marketing-flyer.png",
+        image: "/projects/ma-maarif/marketing-flyer.jpg",
     },
     {
         id: 2,
