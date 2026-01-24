@@ -82,6 +82,7 @@ export default function MarketingCarousel() {
                                         alt={slides[currentIndex].title}
                                         fill
                                         className="object-contain"
+                                        priority={currentIndex === 0}
                                         onError={(e) => {
                                             // Hide image on error to show fallback
                                             const target = e.target as HTMLImageElement;
