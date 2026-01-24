@@ -37,13 +37,13 @@ export default function Navbar() {
                 <div className="flex items-center justify-between">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3 group">
-                        <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-emerald-800 to-emerald-600 flex items-center justify-center shadow-emerald-glow group-hover:scale-105 transition-transform border border-white/10">
+                        <div className="flex items-center justify-center group-hover:scale-105 transition-transform">
                             <Image
                                 src="/logo-sekolah.png"
                                 alt="MA Ma'arif 14 Logo"
-                                width={40}
-                                height={40}
-                                className="w-8 h-8 object-contain"
+                                width={35}
+                                height={35}
+                                className="object-contain"
                             />
                         </div>
                         <div className="hidden sm:block">
