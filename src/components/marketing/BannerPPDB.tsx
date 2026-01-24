@@ -127,23 +127,7 @@ export default function BannerPPDB() {
                                 </div>
                             </div>
 
-                            {/* Floating Badge */}
-                            <div className="absolute -bottom-4 -left-4 z-20 px-5 py-3 bg-white rounded-xl shadow-xl">
-                                <div className="flex items-center gap-3">
-                                    <div className="w-10 h-10 rounded-full bg-emerald-100 flex items-center justify-center">
-                                        <span className="text-emerald-700 font-bold text-lg">🎓</span>
-                                    </div>
-                                    <div>
-                                        <div className="text-emerald-900 font-bold text-sm">Pendaftaran Dibuka</div>
-                                        <div className="text-emerald-600 text-xs">Tahun Ajaran 2026/2027</div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Floating Accent */}
-                            <div className="absolute -top-3 -right-3 z-20 w-16 h-16 bg-gold rounded-full flex items-center justify-center shadow-lg">
-                                <span className="text-emerald-950 font-bold text-xl">NEW</span>
-                            </div>
+                            {/* Overlays Removed for Clean Flyer View */}
                         </div>
                     </motion.div>
                 </div>
