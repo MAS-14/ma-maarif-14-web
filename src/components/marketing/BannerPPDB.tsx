@@ -82,7 +82,7 @@ export default function BannerPPDB() {
                                 <div className="text-emerald-800/70 text-sm">Alumni Sukses</div>
                             </div>
                             <div className="text-center lg:text-left">
-                                <div className="text-3xl lg:text-4xl font-bold text-emerald-950">A</div>
+                                <div className="text-3xl lg:text-4xl font-bold text-emerald-950">B</div>
                                 <div className="text-emerald-800/70 text-sm">Akreditasi</div>
                             </div>
                         </div>
@@ -105,7 +105,7 @@ export default function BannerPPDB() {
                             {/* Elegant Frame Border */}
                             <div className="relative p-3 bg-gradient-to-br from-gold via-gold-light to-gold rounded-2xl shadow-2xl">
                                 {/* Inner Frame */}
-                                <div className="relative overflow-hidden rounded-xl bg-emerald-900">
+                                <div className="relative overflow-hidden rounded-xl">
                                     {/* Placeholder / Actual Image Container */}
                                     <div className="relative aspect-[4/5] w-full">
                                         {/* Image - Will show when file exists */}
