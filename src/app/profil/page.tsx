@@ -66,7 +66,7 @@ export default function ProfilPage() {
                     {/* Stats Tiny */}
                     <div className="grid grid-cols-2 gap-4">
                         <div className="bg-emerald-900 p-6 rounded-xl text-center text-white">
-                            <div className="text-3xl font-bold mb-1">A</div>
+                            <div className="text-3xl font-bold mb-1">B</div>
                             <div className="text-emerald-200 text-sm">Terakreditasi</div>
                         </div>
                         <div className="bg-gold p-6 rounded-xl text-center text-emerald-950">

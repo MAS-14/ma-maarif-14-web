@@ -94,7 +94,7 @@ export default function Home() {
                             <div className="text-emerald-300 font-medium">Tenaga Pendidik</div>
                         </div>
                         <div>
-                            <div className="text-4xl lg:text-5xl font-bold text-gold mb-2">A</div>
+                            <div className="text-4xl lg:text-5xl font-bold text-gold mb-2">B</div>
                             <div className="text-emerald-300 font-medium">Akreditasi</div>
                         </div>
                     </div>
