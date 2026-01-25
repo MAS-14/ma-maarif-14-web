@@ -16,7 +16,7 @@ const slides = [
         id: 2,
         title: "Kegiatan IPNU IPPNU",
         desc: "Membangun karakter kepemimpinan yang berakhlakul karimah.",
-        image: "/projects/ma-maarif/ipnu-ippnu.jpg",
+        image: "/diklat-administrasi.jpg",
     },
     {
         id: 3,
@@ -70,18 +70,14 @@ export default function MarketingCarousel() {
                                 transition={{ duration: 0.5 }}
                                 className="absolute inset-0 flex flex-col md:flex-row"
                             >
-                                {/* Image Section */}
-                                <div className="w-full md:w-3/5 h-64 md:h-full relative bg-gray-800">
-                                    {/* Fallback if image doesn't exist */}
-                                    <div className="absolute inset-0 flex items-center justify-center text-white/20">
-                                        <ImageIcon size={64} />
-                                    </div>
 
+
+                                <div className="w-full md:w-3/5 h-64 md:h-full relative">
                                     <Image
                                         src={slides[currentIndex].image}
                                         alt={slides[currentIndex].title}
                                         fill
-                                        className="object-contain"
+                                        className="object-cover rounded-xl"
                                         priority={currentIndex === 0}
                                         onError={(e) => {
                                             // Hide image on error to show fallback
@@ -182,6 +178,6 @@ export default function MarketingCarousel() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 }
