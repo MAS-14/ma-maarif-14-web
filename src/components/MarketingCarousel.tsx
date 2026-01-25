@@ -22,7 +22,7 @@ const slides = [
         id: 3,
         title: "Fasilitas Sekolah",
         desc: "Sarana pembelajaran modern untuk menunjang skill digital santri.",
-        image: "/projects/ma-maarif/fasilitas.jpg",
+        image: "/ramadhan 25-Recovered.jpg",
     },
 ];
 
