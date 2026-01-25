@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ImageIcon } from 'lucide-react';
+import { ChevronLeft, ChevronRight, X } from 'lucide-react';
 import Image from 'next/image';
 
 const slides = [
@@ -28,14 +28,17 @@ const slides = [
 
 export default function MarketingCarousel() {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     // Auto-play
     useEffect(() => {
+        if (isModalOpen) return; // Pause auto-play when modal is open
+
         const timer = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % slides.length);
         }, 5000);
         return () => clearInterval(timer);
-    }, []);
+    }, [isModalOpen]);
 
     const nextSlide = () => {
         setCurrentIndex((prev) => (prev + 1) % slides.length);
@@ -113,6 +116,7 @@ export default function MarketingCarousel() {
                                     <motion.button
                                         whileHover={{ scale: 1.05 }}
                                         whileTap={{ scale: 0.95 }}
+                                        onClick={() => setIsModalOpen(true)}
                                         className="self-start px-6 py-2 bg-yellow-500 text-emerald-950 font-bold rounded-full hover:bg-yellow-400 transition-colors"
                                     >
                                         Lihat Detail
@@ -178,6 +182,46 @@ export default function MarketingCarousel() {
                     </div>
                 </div>
             </div>
+
+            {/* Modal Overlay */}
+            <AnimatePresence>
+                {isModalOpen && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setIsModalOpen(false)}
+                        className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm p-4"
+                    >
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            exit={{ scale: 0.9, opacity: 0 }}
+                            onClick={(e) => e.stopPropagation()}
+                            className="relative max-w-5xl w-full max-h-[90vh] rounded-2xl overflow-hidden shadow-2xl"
+                        >
+                            <button
+                                onClick={() => setIsModalOpen(false)}
+                                className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-colors"
+                            >
+                                <X size={24} />
+                            </button>
+                            <div className="relative w-full h-auto aspect-video cursor-default">
+                                <Image
+                                    src={slides[currentIndex].image}
+                                    alt={slides[currentIndex].title}
+                                    fill
+                                    className="object-contain bg-black/90"
+                                />
+                            </div>
+                            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent text-white">
+                                <h3 className="text-2xl font-display font-bold mb-2">{slides[currentIndex].title}</h3>
+                                <p className="text-gray-200">{slides[currentIndex].desc}</p>
+                            </div>
+                        </motion.div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section >
     );
 }
