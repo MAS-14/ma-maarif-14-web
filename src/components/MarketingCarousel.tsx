@@ -20,8 +20,8 @@ const slides = [
     },
     {
         id: 3,
-        title: "Fasilitas Sekolah",
-        desc: "Sarana pembelajaran modern untuk menunjang skill digital santri.",
+        title: "Kegiatan Ramadhan",
+        desc: "Dokumentasi kemeriahan dan kegiatan positif di bulan suci Ramadhan.",
         image: "/ramadhan 25-Recovered.jpg",
     },
 ];
