@@ -202,7 +202,7 @@ export default function MarketingCarousel() {
                         >
                             <button
                                 onClick={() => setIsModalOpen(false)}
-                                className="absolute -top-12 right-0 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors border border-white/20 cursor-pointer"
+                                className="fixed top-4 right-4 z-[60] p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-colors border border-white/20 cursor-pointer backdrop-blur-sm"
                             >
                                 <X size={32} />
                             </button>
