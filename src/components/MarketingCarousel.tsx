@@ -197,16 +197,8 @@ export default function MarketingCarousel() {
                             initial={{ scale: 0.9, opacity: 0 }}
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.9, opacity: 0 }}
-                            onClick={(e) => e.stopPropagation()}
-                            className="relative max-w-6xl w-full flex items-center justify-center p-4 outline-none"
+                            className="relative max-w-6xl w-full flex items-center justify-center p-4 outline-none cursor-pointer"
                         >
-                            <button
-                                onClick={() => setIsModalOpen(false)}
-                                className="fixed top-4 right-4 z-[60] p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-colors border border-white/20 cursor-pointer backdrop-blur-sm"
-                            >
-                                <X size={32} />
-                            </button>
-
                             <div className="relative w-full h-[80vh] rounded-2xl overflow-hidden shadow-2xl">
                                 <Image
                                     src={slides[currentIndex].image}
