@@ -198,25 +198,22 @@ export default function MarketingCarousel() {
                             animate={{ scale: 1, opacity: 1 }}
                             exit={{ scale: 0.9, opacity: 0 }}
                             onClick={(e) => e.stopPropagation()}
-                            className="relative max-w-5xl w-full max-h-[90vh] rounded-2xl overflow-hidden shadow-2xl"
+                            className="relative max-w-6xl w-full flex items-center justify-center p-4 outline-none"
                         >
                             <button
                                 onClick={() => setIsModalOpen(false)}
-                                className="absolute top-4 right-4 z-50 p-2 rounded-full bg-black/50 hover:bg-black/70 text-white transition-colors"
+                                className="absolute -top-12 right-0 z-50 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white transition-colors border border-white/20 cursor-pointer"
                             >
-                                <X size={24} />
+                                <X size={32} />
                             </button>
-                            <div className="relative w-full h-auto aspect-video cursor-default">
+
+                            <div className="relative w-full h-[80vh] rounded-2xl overflow-hidden shadow-2xl">
                                 <Image
                                     src={slides[currentIndex].image}
                                     alt={slides[currentIndex].title}
                                     fill
-                                    className="object-contain bg-black/90"
+                                    className="object-contain"
                                 />
-                            </div>
-                            <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent text-white">
-                                <h3 className="text-2xl font-display font-bold mb-2">{slides[currentIndex].title}</h3>
-                                <p className="text-gray-200">{slides[currentIndex].desc}</p>
                             </div>
                         </motion.div>
                     </motion.div>
