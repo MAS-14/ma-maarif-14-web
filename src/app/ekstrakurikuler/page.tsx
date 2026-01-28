@@ -16,29 +16,29 @@ export default function EkstrakurikulerPage() {
 
     return (
         <div className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
                 <h1 className="font-display font-bold text-4xl sm:text-5xl text-emerald-900 mb-4">
                     Ekstrakurikuler
                 </h1>
-                <p className="text-gray-600 max-w-2xl mx-auto">
+                <p className="text-gray-600 max-w-2xl mx-auto text-lg">
                     Wadah pengembangan bakat dan minat siswa di luar jam pelajaran akademik.
                 </p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {ekskul.map((item, idx) => (
-                    <div key={idx} className="group bg-white rounded-2xl shadow-card border border-emerald-50 overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
-                        <div className="h-40 bg-gray-200 relative overflow-hidden">
+                    <div key={idx} className="group bg-white rounded-xl border border-gray-100 overflow-hidden hover:border-emerald-200 hover:shadow-hover transition-all">
+                        <div className="h-40 bg-gray-100 relative overflow-hidden">
                             {/* Placeholder for Image */}
-                            <div className="absolute inset-0 bg-emerald-900/10 flex items-center justify-center text-emerald-900/20 font-bold text-4xl group-hover:scale-110 transition-transform duration-500">
+                            <div className="absolute inset-0 bg-emerald-50 flex items-center justify-center text-emerald-900/20 font-bold text-5xl">
                                 {item.name.charAt(0)}
                             </div>
                         </div>
                         <div className="p-6">
-                            <span className="inline-block px-2.5 py-1 rounded-md bg-emerald-100 text-emerald-800 text-xs font-bold mb-3">
+                            <span className="inline-block px-3 py-1 rounded-lg bg-emerald-50 text-emerald-700 text-xs font-semibold mb-3">
                                 {item.category}
                             </span>
-                            <h3 className="font-display font-bold text-xl text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
+                            <h3 className="font-display font-bold text-xl text-emerald-900 mb-2">
                                 {item.name}
                             </h3>
                             <p className="text-gray-600 text-sm leading-relaxed">
@@ -50,13 +50,13 @@ export default function EkstrakurikulerPage() {
             </div>
 
             {/* Quote Section */}
-            <div className="mt-20 bg-cream rounded-3xl p-10 text-center relative overflow-hidden">
-                <Quote className="w-16 h-16 text-emerald-100 absolute top-4 left-4" />
+            <div className="mt-20 bg-gray-50 rounded-2xl p-10 text-center relative">
+                <Quote className="w-12 h-12 text-emerald-100 absolute top-6 left-6" />
                 <div className="relative z-10 max-w-3xl mx-auto">
                     <p className="font-display italic text-2xl text-emerald-900 mb-6">
                         "Bakat bukan hanya anugerah, tapi benih yang harus disiram dengan latihan dan disiplin. Di sini, kami membantu menumbuhkannya."
                     </p>
-                    <div className="font-bold text-gray-600">- Kesiswaan MA Ma'arif 14</div>
+                    <div className="font-semibold text-gray-600">- Kesiswaan MA Ma'arif 14</div>
                 </div>
             </div>
         </div>
