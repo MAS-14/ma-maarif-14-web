@@ -24,12 +24,18 @@ const config: Config = {
                     900: "#064E3B",
                     950: "#022C22",
                 },
-                // Supporting Colors
-                cream: {
-                    DEFAULT: "#FFFDF7",
-                    50: "#FFFEF9",
-                    100: "#FFFDF7",
-                    200: "#FFF9E6",
+                // Neutral Grays - Minimalist
+                gray: {
+                    50: "#F9FAFB",
+                    100: "#F3F4F6",
+                    200: "#E5E7EB",
+                    300: "#D1D5DB",
+                    400: "#9CA3AF",
+                    500: "#6B7280",
+                    600: "#4B5563",
+                    700: "#374151",
+                    800: "#1F2937",
+                    900: "#111827",
                 },
                 gold: {
                     DEFAULT: "#D4AF37",
@@ -42,13 +48,13 @@ const config: Config = {
                 display: ["var(--font-outfit)", "Outfit", "sans-serif"],
                 serif: ["var(--font-playfair)", "Playfair Display", "Georgia", "serif"],
             },
-            backgroundImage: {
-                "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-                "gradient-emerald": "linear-gradient(135deg, #064E3B 0%, #047857 50%, #10B981 100%)",
-            },
             boxShadow: {
-                "emerald-glow": "0 0 40px rgba(6, 78, 59, 0.3)",
-                "card": "0 4px 20px rgba(0, 0, 0, 0.08)",
+                "sm": "0 1px 2px 0 rgba(0, 0, 0, 0.05)",
+                "DEFAULT": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
+                "md": "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
+                "lg": "0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)",
+                "card": "0 2px 8px rgba(0, 0, 0, 0.06)",
+                "hover": "0 4px 12px rgba(0, 0, 0, 0.08)",
             },
             animation: {
                 "fade-in": "fadeIn 0.6s ease-out",

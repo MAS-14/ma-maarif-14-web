@@ -24,20 +24,14 @@ const socialLinks = [
 
 export default function Footer() {
     return (
-        <footer className="relative bg-gradient-to-br from-emerald-950 via-emerald-900 to-emerald-800 text-white overflow-hidden">
-            {/* Decorative Pattern */}
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-1/2 -translate-y-1/2" />
-                <div className="absolute bottom-0 right-0 w-72 h-72 bg-white rounded-full translate-x-1/4 translate-y-1/4" />
-            </div>
-
-            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <footer className="bg-emerald-900 text-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                     {/* Brand Section */}
                     <div className="lg:col-span-1">
                         <Link href="/" className="flex items-center gap-3 mb-6">
-                            <div className="w-14 h-14 rounded-xl bg-white/10 backdrop-blur flex items-center justify-center">
-                                <GraduationCap className="w-8 h-8 text-emerald-300" />
+                            <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center">
+                                <GraduationCap className="w-7 h-7 text-emerald-300" />
                             </div>
                             <div>
                                 <h2 className="font-display font-bold text-xl">MA Ma'arif 14</h2>
@@ -56,7 +50,7 @@ export default function Footer() {
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
+                                    className="w-10 h-10 rounded-lg bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
                                     aria-label={social.name}
                                 >
                                     <social.icon className="w-5 h-5" />

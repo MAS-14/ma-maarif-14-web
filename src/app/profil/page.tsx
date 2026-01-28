@@ -5,30 +5,28 @@ export default function ProfilPage() {
     return (
         <div className="pt-24 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-16">
-                <h1 className="font-display font-bold text-4xl sm:text-5xl text-emerald-900 mb-4">
+            <div className="text-center mb-20">
+                <h1 className="font-display font-bold text-4xl sm:text-5xl text-emerald-900 mb-3">
                     Profil Sekolah
                 </h1>
-                <div className="w-24 h-1 bg-gold mx-auto rounded-full"></div>
+                <div className="w-16 h-1 bg-gold mx-auto rounded-full"></div>
             </div>
 
             {/* Content Grid */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
                 {/* Visi & Misi */}
-                <div className="space-y-10">
-                    <div className="bg-white p-8 rounded-2xl shadow-card border border-emerald-50">
-                        <h2 className="font-display font-bold text-2xl text-emerald-800 mb-4 flex items-center">
-                            <span className="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center mr-3 text-emerald-700">V</span>
+                <div className="space-y-8">
+                    <div className="bg-white p-8 rounded-xl border border-gray-100">
+                        <h2 className="font-display font-bold text-2xl text-emerald-900 mb-4">
                             Visi
                         </h2>
-                        <p className="text-gray-700 leading-relaxed italic border-l-4 border-gold pl-4">
+                        <p className="text-gray-700 leading-relaxed italic pl-4 border-l-2 border-emerald-200">
                             "Unggul dalam imtaq, Terampil dalam iptek, Berdayaguna bagi umat"
                         </p>
                     </div>
 
-                    <div className="bg-white p-8 rounded-2xl shadow-card border border-emerald-50">
-                        <h2 className="font-display font-bold text-2xl text-emerald-800 mb-4 flex items-center">
-                            <span className="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center mr-3 text-emerald-700">M</span>
+                    <div className="bg-white p-8 rounded-xl border border-gray-100">
+                        <h2 className="font-display font-bold text-2xl text-emerald-900 mb-4">
                             Misi
                         </h2>
                         <p className="text-gray-700 leading-relaxed">

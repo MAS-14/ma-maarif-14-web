@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Menu, X, GraduationCap } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import Image from "next/image";
 
 const navLinks = [
@@ -29,28 +29,28 @@ export default function Navbar() {
     return (
         <header
             className={`fixed top-0 left-0 right-0 w-full z-[100] transition-all duration-300 ${scrolled
-                ? "bg-emerald-950/95 backdrop-blur-md shadow-lg py-3 border-b border-white/10"
-                : "bg-emerald-950 py-4 border-b border-white/10"
+                    ? "bg-white/95 backdrop-blur-sm shadow-sm border-b border-gray-100"
+                    : "bg-white border-b border-gray-100"
                 }`}
         >
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex items-center justify-between">
+                <div className="flex items-center justify-between h-16">
                     {/* Logo */}
                     <Link href="/" className="flex items-center gap-3 group">
-                        <div className="flex items-center justify-center group-hover:scale-105 transition-transform">
+                        <div className="flex items-center justify-center">
                             <Image
                                 src="/logo-sekolah.png"
                                 alt="MA Ma'arif 14 Logo"
-                                width={35}
-                                height={35}
+                                width={40}
+                                height={40}
                                 className="object-contain"
                             />
                         </div>
                         <div className="hidden sm:block">
-                            <h1 className="font-display font-bold text-white text-lg leading-tight">
+                            <h1 className="font-display font-bold text-emerald-900 text-lg leading-tight">
                                 MA Ma'arif 14
                             </h1>
-                            <p className="text-xs text-emerald-100/80 font-medium">Sukorame</p>
+                            <p className="text-xs text-gray-600 font-medium">Sukorame</p>
                         </div>
                     </Link>
 
@@ -60,20 +60,20 @@ export default function Navbar() {
                             <Link
                                 key={link.name}
                                 href={link.href}
-                                className={`relative px-4 py-2 font-medium transition-colors group ${pathname === link.href
-                                    ? "text-yellow-500 border-b-2 border-yellow-500"
-                                    : "text-white hover:text-emerald-200"
+                                className={`relative px-4 py-2 font-medium text-sm transition-colors ${pathname === link.href
+                                        ? "text-emerald-900"
+                                        : "text-gray-600 hover:text-emerald-700"
                                     }`}
                             >
                                 <span>{link.name}</span>
                                 {link.badge && (
-                                    <span className="absolute -top-1 -right-1 px-1.5 py-0.5 text-[10px] font-bold bg-gold text-white rounded-full shadow-sm">
+                                    <span className="absolute -top-1 -right-1 px-1.5 py-0.5 text-[10px] font-bold bg-gold text-white rounded-full">
                                         PK
                                     </span>
                                 )}
-                                {/* Underline Decoration - Only show hover effect if not active */}
-                                {pathname !== link.href && (
-                                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 bg-gold group-hover:w-3/4 transition-all duration-300" />
+                                {/* Active Indicator */}
+                                {pathname === link.href && (
+                                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-3/4 h-0.5 bg-emerald-900 rounded-full" />
                                 )}
                             </Link>
                         ))}
@@ -83,7 +83,7 @@ export default function Navbar() {
                     <div className="hidden md:block">
                         <Link
                             href="/pendaftaran"
-                            className="px-6 py-2.5 bg-gold hover:bg-gold-light text-emerald-950 font-bold rounded-full hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] hover:scale-105 transition-all duration-300"
+                            className="px-6 py-2.5 bg-emerald-900 text-white font-semibold text-sm rounded-lg hover:bg-emerald-800 transition-colors"
                         >
                             Daftar Sekarang
                         </Link>
@@ -92,13 +92,13 @@ export default function Navbar() {
                     {/* Mobile Menu Button */}
                     <button
                         onClick={() => setIsOpen(!isOpen)}
-                        className="md:hidden p-2 rounded-lg hover:bg-white/10 transition-colors"
+                        className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
                         aria-label="Toggle menu"
                     >
                         {isOpen ? (
-                            <X className="w-6 h-6 text-white" />
+                            <X className="w-6 h-6 text-gray-700" />
                         ) : (
-                            <Menu className="w-6 h-6 text-white" />
+                            <Menu className="w-6 h-6 text-gray-700" />
                         )}
                     </button>
                 </div>
@@ -106,7 +106,7 @@ export default function Navbar() {
 
             {/* Mobile Navigation */}
             <div
-                className={`md:hidden absolute top-full left-0 right-0 bg-emerald-950 border-b border-white/10 shadow-lg transition-all duration-300 overflow-hidden ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+                className={`md:hidden absolute top-full left-0 right-0 bg-white border-b border-gray-100 shadow-lg transition-all duration-300 overflow-hidden ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
                     }`}
             >
                 <nav className="flex flex-col p-4 space-y-1">
@@ -115,21 +115,24 @@ export default function Navbar() {
                             key={link.name}
                             href={link.href}
                             onClick={() => setIsOpen(false)}
-                            className="flex items-center justify-between px-4 py-3 text-white font-medium hover:bg-white/10 rounded-lg transition-colors"
+                            className={`flex items-center justify-between px-4 py-3 font-medium rounded-lg transition-colors ${pathname === link.href
+                                    ? "bg-emerald-50 text-emerald-900"
+                                    : "text-gray-700 hover:bg-gray-50"
+                                }`}
                         >
                             <span>{link.name}</span>
                             {link.badge && (
-                                <span className="px-2 py-1 text-xs font-bold bg-gold text-emerald-950 rounded-full">
+                                <span className="px-2 py-1 text-xs font-bold bg-gold text-white rounded-full">
                                     {link.badge}
                                 </span>
                             )}
                         </Link>
                     ))}
-                    <div className="pt-3 border-t border-white/10">
+                    <div className="pt-3 border-t border-gray-100">
                         <Link
                             href="/pendaftaran"
                             onClick={() => setIsOpen(false)}
-                            className="block text-center px-6 py-3 bg-gold text-emerald-950 font-bold rounded-xl hover:bg-gold-light"
+                            className="block text-center px-6 py-3 bg-emerald-900 text-white font-semibold rounded-lg hover:bg-emerald-800 transition-colors"
                         >
                             Daftar Sekarang
                         </Link>
