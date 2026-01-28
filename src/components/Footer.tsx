@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { GraduationCap, MapPin, Phone, Mail, Facebook, Instagram, Youtube } from "lucide-react";
+import { GraduationCap, MapPin, Phone, Mail, Facebook, Instagram, Music } from "lucide-react";
 
 const footerLinks = {
     navigasi: [
@@ -17,9 +17,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
-    { name: "Facebook", icon: Facebook, href: "#" },
-    { name: "Instagram", icon: Instagram, href: "#" },
-    { name: "Youtube", icon: Youtube, href: "#" },
+    { name: "Instagram", icon: Instagram, href: "https://www.instagram.com/mamaarif14sukorame/" },
+    { name: "Facebook", icon: Facebook, href: "https://web.facebook.com/people/MA-Maarif-Sukorame/100077599161271/" },
+    { name: "TikTok", icon: Music, href: "https://www.tiktok.com/@maarif14sukorameofficial?_r=1&_t=ZS-93R3F6sUNVv" },
 ];
 
 export default function Footer() {
@@ -54,6 +54,8 @@ export default function Footer() {
                                 <a
                                     key={social.name}
                                     href={social.href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
                                     className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-colors"
                                     aria-label={social.name}
                                 >
