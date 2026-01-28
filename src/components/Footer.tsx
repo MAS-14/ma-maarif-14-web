@@ -106,19 +106,19 @@ export default function Footer() {
                             <li className="flex items-start gap-3">
                                 <MapPin className="w-5 h-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                                 <span className="text-emerald-200/80 text-sm">
-                                    Jl. Raya Sukorame No. 14, Kec. Sukorame, Kab. Lamongan, Jawa Timur
+                                    Jalan Raya Sukorame – Babat No. 99 Lamongan 62276
                                 </span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                                <a href="tel:+62322123456" className="text-emerald-200/80 hover:text-white text-sm transition-colors">
-                                    (0322) 123-456
+                                <a href="tel:+62085755259164" className="text-emerald-200/80 hover:text-white text-sm transition-colors">
+                                    085755259164
                                 </a>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail className="w-5 h-5 text-emerald-400 flex-shrink-0" />
-                                <a href="mailto:info@mamaarif14.sch.id" className="text-emerald-200/80 hover:text-white text-sm transition-colors">
-                                    info@mamaarif14.sch.id
+                                <a href="mailto:maarif14.sukorame@gmail.com" className="text-emerald-200/80 hover:text-white text-sm transition-colors">
+                                    maarif14.sukorame@gmail.com
                                 </a>
                             </li>
                         </ul>
