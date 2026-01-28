@@ -98,7 +98,7 @@ export default function PendaftaranPage() {
                                 </div>
                                 <div>
                                     <div className="text-xs font-bold text-emerald-800 uppercase">Hubungi Panitia</div>
-                                    <div className="font-medium">0812-3456-7890 (Pak Budi)</div>
+                                    <div className="font-medium">085755259164 (Pak Mad)</div>
                                 </div>
                             </div>
                             {/* Add more contacts if needed */}
