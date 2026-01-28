@@ -22,7 +22,7 @@ export default function ProfilPage() {
                             Visi
                         </h2>
                         <p className="text-gray-700 leading-relaxed italic border-l-4 border-gold pl-4">
-                            "Terwujudnya Generasi Muslim yang Beriman, Bertaqwa, Berilmu, Berhaluan Ahlussunnah Wal Jama'ah dan Berakhlakul Karimah."
+                            "Unggul dalam imtaq, Terampil dalam iptek, Berdayaguna bagi umat"
                         </p>
                     </div>
 
@@ -32,12 +32,9 @@ export default function ProfilPage() {
                             Misi
                         </h2>
                         <ul className="space-y-4">
+
                             {[
-                                "Melaksanakan pembelajaran dan bimbingan secara efektif sehingga setiap siswa berkembang secara optimal sesuai dengan potensi yang dimiliki.",
-                                "Menumbuhkan semangat keunggulan secara intensif kepada seluruh warga madrasah.",
-                                "Mendorong dan membantu setiap siswa untuk mengenali potensi dirinya sehingga dapat dikembangkan secara optimal.",
-                                "Menumbuhkan penghayatan terhadap ajaran agama Islam Ahlussunnah Wal Jama'ah dan budaya bangsa.",
-                                "Menerapkan manajemen partisipatif dengan melibatkan seluruh warga madrasah dan komite madrasah."
+                                "Mewujudkan mutu lulusan madrasah yang berakhlakul karimah, berdaya saing, dan siap berkolaborasi di masyarakat"
                             ].map((item, idx) => (
                                 <li key={idx} className="flex items-start text-gray-700 leading-relaxed">
                                     <span className="min-w-[24px] h-6 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold flex items-center justify-center mr-3 mt-0.5">{idx + 1}</span>
