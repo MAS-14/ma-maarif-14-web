@@ -31,17 +31,9 @@ export default function ProfilPage() {
                             <span className="w-8 h-8 rounded-lg bg-emerald-100 flex items-center justify-center mr-3 text-emerald-700">M</span>
                             Misi
                         </h2>
-                        <ul className="space-y-4">
-
-                            {[
-                                "Mewujudkan mutu lulusan madrasah yang berakhlakul karimah, berdaya saing, dan siap berkolaborasi di masyarakat"
-                            ].map((item, idx) => (
-                                <li key={idx} className="flex items-start text-gray-700 leading-relaxed">
-                                    <span className="min-w-[24px] h-6 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold flex items-center justify-center mr-3 mt-0.5">{idx + 1}</span>
-                                    {item}
-                                </li>
-                            ))}
-                        </ul>
+                        <p className="text-gray-700 leading-relaxed">
+                            "Mewujudkan mutu lulusan madrasah yang berakhlakul karimah, berdaya saing, dan siap berkolaborasi di masyarakat"
+                        </p>
                     </div>
                 </div>
 
